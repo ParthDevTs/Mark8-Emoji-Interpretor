@@ -1,0 +1,22 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.userName {
+  color: blue;
+}
+
+.likeButton {
+  color: blue;
+  background-color: transparent;
+  border: none;
+  font-family: monospace;
+  border: 0.1rem solid currentColor;
+  padding: 1rem;
+  margin: 1rem;
+  transition: all 0.15s ease-out;
+}
+.likeButton:hover {
+  box-shadow: 0.1rem 01rem 1rem black;
+  text-shadow: currentColor 0.1rem 0.1rem 0.5rem;
+}
