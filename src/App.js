@@ -8,7 +8,12 @@ export default function App() {
     "😉": "Winking Face",
     "🤩": "Star-Struck",
     "😘": "Face Blowing a Kiss",
-    "😗": "Kissing Face"
+    "😗": "Kissing Face",
+    "🤔": "Thinking Face",
+    "❤️": "Red Heart",
+    "😭": "Loudly Crying Face",
+    "🥺": " Pleading Face",
+    "👀": " Eyes",
   };
   const [likeCounter, setLikeCounter] = useState(0);
 
