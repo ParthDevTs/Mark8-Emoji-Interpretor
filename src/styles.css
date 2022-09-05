@@ -20,3 +20,23 @@
   box-shadow: 0.1rem 01rem 1rem black;
   text-shadow: currentColor 0.1rem 0.1rem 0.5rem;
 }
+
+footer {
+  display: grid;
+  place-content: center;
+
+  color: aqua;
+  background-color: black;
+
+  padding: 2rem;
+}
+
+footer a {
+  color: aqua;
+  margin: 1rem;
+  text-decoration: none;
+}
+
+.footer__title {
+  margin-bottom: 1rem;
+}

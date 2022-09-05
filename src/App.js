@@ -60,6 +60,42 @@ export default function App() {
           <span style={{ color: emojiColor }}> {emojiMeaning}</span>
         </p>
       </div>
+      <footer>
+        <div className="footer__title">
+          made with{" "}
+          <span className="emoji" role="img" aria-label="love emoji">
+            ❤️
+          </span>{" "}
+          by Parth Kathuria
+        </div>
+
+        <span class="social__media">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/parth.ts/"
+            className="social"
+            rel="noreferrer"
+          >
+            Insta
+          </a>
+          <a
+            target="_blank"
+            href="https://github.com/ParthDevTs?tab=repositories"
+            className="social"
+            rel="noreferrer"
+          >
+            Github
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/parth-kathuria-4b0856177/"
+            className="social"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+        </span>
+      </footer>
     </div>
   );
 }
