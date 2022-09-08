@@ -15,6 +15,8 @@ export default function App() {
     "🥺": " Pleading Face",
     "👀": " Eyes",
   };
+
+  var emojisWeKnow = Object.keys(emojiDictionary);
   const [likeCounter, setLikeCounter] = useState(0);
 
   var [emojiMeaning, setEmojiMeaning] = useState("");
@@ -31,7 +33,21 @@ export default function App() {
   function emojiHandler(event) {
     var inputValue = event.target.value;
     var meaning = emojiDictionary[inputValue];
+
+    if (meaning === undefined) {
+      meaning = "we dont have this in our database";
+    }
     setEmojiMeaning(meaning);
+  }
+
+  function onCLickHandler(emoji) {
+    var meaning = emojiDictionary[emoji];
+
+    if (meaning === undefined) {
+      meaning = "we dont have this in our database";
+    }
+    setEmojiMeaning(meaning);
+    // emojiHandler(emojiDictionary[emoji]);
   }
 
   return (
@@ -50,7 +66,21 @@ export default function App() {
           {" "}
           Select from the following Emoji:{" "}
           <span role="img" aria-label="emojis">
-            😀 😉 🤩 😘 😗
+            {emojisWeKnow.map(function (emoji) {
+              return (
+                <span
+                  style={{
+                    padding: "1rem",
+                    fontSize: "1.5rem",
+                    cursor: "pointer",
+                  }}
+                  key={emoji}
+                  onClick={() => onCLickHandler(emoji)}
+                >
+                  {emoji}
+                </span>
+              );
+            })}
           </span>
         </p>
         <input onChange={emojiHandler} />
